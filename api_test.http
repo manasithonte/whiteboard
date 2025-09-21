@@ -1,0 +1,32 @@
+### Test User Registration
+POST http://localhost:5001/api/users/register
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### Test User Login
+POST http://localhost:5001/api/users/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### Test Canvas List (requires token)
+GET http://localhost:5001/api/canvas/list
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Test Canvas Creation (requires token)
+POST http://localhost:5001/api/canvas/create
+Authorization: Bearer YOUR_TOKEN_HERE
+Content-Type: application/json
+
+{}
+
+### Test Canvas Load (requires token and canvas ID)
+GET http://localhost:5001/api/canvas/load/CANVAS_ID_HERE
+Authorization: Bearer YOUR_TOKEN_HERE
